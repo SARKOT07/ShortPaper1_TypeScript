@@ -6,7 +6,7 @@ import {Cita} from "./Cita"
 
 export class Doctor extends Persona{
   
-    constructor (id:string,Nombre:string,Apellido:string,private especialidad:Especialidad[]){
+    constructor (id:string,Nombre:string,Apellido:string,private especialidad:Especialidad[],private citasAgendadas:Cita[],private historialMedicoRealizado:HistorialMedico[]){
         super(id,Nombre,Apellido)
         this.especialidad= especialidad;
     }
