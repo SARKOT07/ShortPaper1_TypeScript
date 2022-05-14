@@ -5,9 +5,8 @@ import { Modalidad } from "../Enumerations/Modalidad";
 export class Suscripcion{
 
 
-
     constructor (private id: string,private fechaVencimiento: Date,private monto: number,private modalidad: Modalidad,private estado: Estado,private beneficioEmpleado: boolean,private metodoDePagoElegido: MetodoDePago){
-      
+   
     } 
 
     //Getters
