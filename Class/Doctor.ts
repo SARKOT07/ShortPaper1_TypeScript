@@ -40,7 +40,7 @@ export class Doctor extends Persona{
     }
     
     set _historialMedicoRealizado(value:HistorialMedico[]){
-        this.citasAgendadas=value;
+        this.historialMedicoRealizado=value;
     }
     
     set _id(value:string){
