@@ -5,71 +5,57 @@ import { PresionArterial } from "./PresionArterial"
 
 export class HistorialMedico{
 
-    private id: String
-    private antecedentesPersonales: String
-    private frecuenciaCardiaca: Number
-    private saturacion: Number
-    private peso: Number
-    private altura: Number
     private historialDelPaciente?: Paciente[] | undefined
 
-    constructor (id: String, antecedentesPersonales: String, frecuenciaCardiaca: Number, saturacion: Number, peso: Number, altura: Number, private resultadoDelValor: ExamenValor[], private resultadoDeLaPresion: PresionArterial[], historialDelPaciente: Paciente[]) {
-        this.id = id;
-        this.antecedentesPersonales = antecedentesPersonales;
-        this.frecuenciaCardiaca = frecuenciaCardiaca;
-        this.saturacion = saturacion;
-        this.peso = peso
-        this.altura = altura
-        this.resultadoDelValor = []
-        this.resultadoDeLaPresion = []
+    constructor (private id: string, private antecedentesPersonales: string, private frecuenciaCardiaca: number, private saturacion: number, private peso: number, private altura: number, private resultadoDelValor: ExamenValor[], private resultadoDeLaPresion: PresionArterial[], historialDelPaciente: Paciente[]) {
         this.historialDelPaciente = []
     }
 
-    public get _id(): String {
+    public get _id(): string {
         return this.id
     }
 
-    public set _id(value: String) {
+    public set _id(value: string) {
         this.id = value
     }
 
-    public get _antecedentesPersonales (): String {
+    public get _antecedentesPersonales (): string {
         return this.antecedentesPersonales
     }
 
-    public set _antecedentesPersonales (value: String) {
+    public set _antecedentesPersonales (value: string) {
         this.antecedentesPersonales = value
     }
 
-    public get _frecuenciaCardiaca(): Number {
+    public get _frecuenciaCardiaca(): number {
         return this.frecuenciaCardiaca
     }
 
-    public set _frecuenciaCardiaca(value: Number) {
+    public set _frecuenciaCardiaca(value: number) {
         this.frecuenciaCardiaca = value
     }
 
-    public get _saturacion(): Number {
+    public get _saturacion(): number {
         return this.saturacion
     }
 
-    public set _saturacion(value: Number) {
+    public set _saturacion(value: number) {
         this.saturacion = value
     }
 
-    public get _peso(): Number {
+    public get _peso(): number {
         return this.peso
     }
 
-    public set _peso(value: Number) {
+    public set _peso(value: number) {
         this.peso = value
     }
     
-    public get _altura(): Number {
+    public get _altura(): number {
         return this.altura
     }
 
-    public set _altura(value: Number) {
+    public set _altura(value: number) {
         this.altura = value
     }
 

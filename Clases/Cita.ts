@@ -4,23 +4,17 @@ import { Paciente } from "./Paciente"
     
 export class Cita {
 
-    protected id: String
-    protected fechayHora: Date
     protected personaCitada?: Paciente[]
-    protected historialMedicoDeLaCita?: HistorialMedico[]
 
-    constructor (id: String, fechayHora: Date, personaCitada: Paciente[], historialMedicoDeLaCita: HistorialMedico[]) {
-        this.id = id;
-        this.fechayHora = fechayHora;
-        this.personaCitada = personaCitada;
-        this.historialMedicoDeLaCita = historialMedicoDeLaCita;
+    constructor (protected id: string, protected fechayHora: Date, personaCitada: Paciente[], protected historialMedicoDeLaCita: HistorialMedico[]) {
+        this.personaCitada = []
     }
 
-    get _id () : String{
+    get _id () : string{
         return this.id;
     }
 
-    set _id (value: String) {
+    set _id (value: string) {
         this.id = value;
     }
 

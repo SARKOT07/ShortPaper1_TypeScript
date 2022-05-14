@@ -1,8 +1,11 @@
 import {RangoDeValores} from "./RangoDeValores"
+
 export class ExamenMedicoTipo{
-    constructor (private id:string, private unidad:string, public nombre:string, private valoresPermitidos:RangoDeValores){
+    
+    constructor (private id:string, private unidad:string, public nombre:string, private valoresPermitidos:RangoDeValores) {
 
     }
+
     get _id():string{
         return this.id;
     }  
