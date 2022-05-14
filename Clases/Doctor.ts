@@ -5,9 +5,14 @@ import {Cita} from "./Cita"
 
 
 export class Doctor extends Persona{
-    
-    constructor (id:string,Nombre:string,Apellido:string,private especialidad:Especialidad[], private historialMedicoRealizado?:HistorialMedico[], private citasAgendadas?:Cita[]){
+
+        private historialMedicoRealizado:HistorialMedico[];
+        private citasAgendadas:Cita[];
+
+    constructor (id:string,Nombre:string,Apellido:string,private especialidad:Especialidad[]){
         super(id,Nombre,Apellido)
+        this.historialMedicoRealizado= [];
+        this.citasAgendadas= [];
     }
 
     get _id():string{
@@ -23,17 +28,11 @@ export class Doctor extends Persona{
         return this.especialidad;
     }  
     get _historialMedicoRealizado():HistorialMedico[]{
-        if (this.historialMedicoRealizado){
-            return this.historialMedicoRealizado
-        }
-        else return []
+        return this.historialMedicoRealizado
+
     }
     get _citasAgendadas():Cita[]{
-        if (this.citasAgendadas){
-            return this.citasAgendadas
-        }
-        else return []
-
+        return this.citasAgendadas
     }
 
     set _citasAgendadas(value:Cita[]){
