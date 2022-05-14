@@ -4,18 +4,16 @@ import { HistorialMedico } from "./HistorialMedico";
 
 
 export class CitaVirtual extends Cita {
-
-    private url: String;
     
-    constructor (id: String, fechayHora: Date, personaCitada: Paciente[], historialMedicoDeLaCita: HistorialMedico[], url: String, ) {
+    constructor (id: string, fechayHora: Date, personaCitada: Paciente[], historialMedicoDeLaCita: HistorialMedico[], private url: string ) {
         super(id,fechayHora,personaCitada,historialMedicoDeLaCita);
-        this.url = url;
     }
 
-    public get _url(): String {
+    public get _url(): string {
         return this.url;
     }
-    public set _url(value: String) {
+
+    public set _url(value: string) {
         this.url = value;
     }
 
