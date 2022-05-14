@@ -1,9 +1,10 @@
 import {ExamenMedicoTipo} from "./ExamenMedicoTipo"
 export class Especialidad{
 
+    private examenesRequeridos:ExamenMedicoTipo[];
 
-    constructor (private id: string,private nombre: string,private examenesRequeridos?:ExamenMedicoTipo[]){
-
+    constructor (private id: string,private nombre: string){
+        this.examenesRequeridos=[];
     }
     get _id():string{
         return this.id;
@@ -12,10 +13,7 @@ export class Especialidad{
         return this.nombre;
     }
     get _examenesRequeridos():ExamenMedicoTipo[]{
-        if (this.examenesRequeridos){
-            return this.examenesRequeridos;
-        }
-        else return []
+        return this.examenesRequeridos;
     }
     set _id(value:string){
         this.id=value;
