@@ -5,15 +5,15 @@ import { HistorialMedico } from "./HistorialMedico";
 
 export class CitaVirtual extends Cita {
     
-    constructor (id: string, fechayHora: Date, personaCitada: Paciente[], historialMedicoDeLaCita: HistorialMedico[], private url: String ) {
+    constructor (id: string, fechayHora: Date, personaCitada: Paciente[], historialMedicoDeLaCita: HistorialMedico[], private url: string ) {
         super(id,fechayHora,personaCitada,historialMedicoDeLaCita);
     }
 
-    public get _url(): String {
+    public get _url(): string {
         return this.url;
     }
-    
-    public set _url(value: String) {
+
+    public set _url(value: string) {
         this.url = value;
     }
 
