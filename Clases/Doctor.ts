@@ -5,10 +5,9 @@ import {Cita} from "./Cita"
 
 
 export class Doctor extends Persona{
-  
-    constructor (id:string,Nombre:string,Apellido:string,private especialidad:Especialidad[],private citasAgendadas:Cita[],private historialMedicoRealizado:HistorialMedico[]){
+    
+    constructor (id:string,Nombre:string,Apellido:string,private especialidad:Especialidad[], private historialMedicoRealizado?:HistorialMedico[], private citasAgendadas?:Cita[]){
         super(id,Nombre,Apellido)
-        this.especialidad= especialidad;
     }
 
     get _id():string{
@@ -23,6 +22,28 @@ export class Doctor extends Persona{
     get _especialidad():Especialidad[]{
         return this.especialidad;
     }  
+    get _historialMedicoRealizado():HistorialMedico[]{
+        if (this.historialMedicoRealizado){
+            return this.historialMedicoRealizado
+        }
+        else return []
+    }
+    get _citasAgendadas():Cita[]{
+        if (this.citasAgendadas){
+            return this.citasAgendadas
+        }
+        else return []
+
+    }
+
+    set _citasAgendadas(value:Cita[]){
+        this.citasAgendadas=value;
+    }
+    
+    set _historialMedicoRealizado(value:HistorialMedico[]){
+        this.citasAgendadas=value;
+    }
+    
     set _id(value:string){
         this.id=value;
     }
