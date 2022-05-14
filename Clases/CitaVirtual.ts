@@ -12,6 +12,7 @@ export class CitaVirtual extends Cita {
     public get _url(): String {
         return this.url;
     }
+    
     public set _url(value: String) {
         this.url = value;
     }

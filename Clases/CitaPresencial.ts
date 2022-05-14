@@ -28,6 +28,7 @@ export class CitaPresencial extends Cita {
     public get _altitud(): string {
         return this.altitud;
     }
+    
     public set _altitud(value: string) {
         this.altitud = value;
     }

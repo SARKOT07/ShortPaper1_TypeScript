@@ -3,22 +3,22 @@ import { ExamenMedicoTipo } from "./ExamenMedicoTipo"
 
 export class ExamenValor {
     
-    constructor (private id: String, private valorActual: Number, private tipo: ExamenMedicoTipo[]) {
+    constructor (private id: string, private valorActual: number, private tipo: ExamenMedicoTipo[]) {
   
     }
 
-    public get _id(): String {
+    public get _id(): string {
         return this._id;
     }
 
-    public set _id(value: String) {
+    public set _id(value: string) {
         this._id = value;
     }
 
-    public get _valorActual(): Number {
+    public get _valorActual(): number {
         return this.valorActual;
     }
-    public set _valorActual(value: Number) {
+    public set _valorActual(value: number) {
         this.valorActual = value;
     }
 
@@ -28,5 +28,10 @@ export class ExamenValor {
 
     public set _tipo(value: ExamenMedicoTipo[]) {
         this.tipo = value;
+    }
+
+    verificarEstado (valorActual: number) : string {
+        const resultado  = "placeholder"
+        return resultado;
     }
 }

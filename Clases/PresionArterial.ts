@@ -3,7 +3,7 @@ import { RangoDeValores } from "./RangoDeValores";
 
 export class PresionArterial {
     
-    constructor (private id: string, private valorActual: RangoDeValores) {
+    constructor (private id: string, private valorActual: RangoDeValores[]) {
 
     }
 
@@ -15,11 +15,11 @@ export class PresionArterial {
         this.id = value;
     }
 
-    public get _valorActual(): RangoDeValores {
+    public get _valorActual(): RangoDeValores[] {
         return this.valorActual;
     }
 
-    public set _valorActual(value: RangoDeValores) {
+    public set _valorActual(value: RangoDeValores[]) {
         this.valorActual = value;
     }
 

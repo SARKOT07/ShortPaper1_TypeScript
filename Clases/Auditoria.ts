@@ -3,10 +3,7 @@
  
  export class Auditoria {
 
-    private auditoriaDePersona: Persona[];
-
-    constructor (private id: string, private fecha: Date, private comportamiento: EventoComportamiento, auditoriaDePersona: Persona[]) {
-        this.auditoriaDePersona = []
+    constructor (private id: string, private fecha: Date, private comportamiento: EventoComportamiento, private auditoriaDePersona: Persona[]) {
     }
  
     public get _id(): string {

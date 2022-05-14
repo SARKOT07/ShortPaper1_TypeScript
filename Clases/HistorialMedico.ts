@@ -5,7 +5,7 @@ import { PresionArterial } from "./PresionArterial"
 
 export class HistorialMedico{
 
-    private historialDelPaciente?: Paciente[] | undefined
+    private historialDelPaciente: Paciente[]
 
     constructor (private id: string, private antecedentesPersonales: string, private frecuenciaCardiaca: number, private saturacion: number, private peso: number, private altura: number, private resultadoDelValor: ExamenValor[], private resultadoDeLaPresion: PresionArterial[], historialDelPaciente: Paciente[]) {
         this.historialDelPaciente = []
@@ -75,11 +75,11 @@ export class HistorialMedico{
         this.resultadoDeLaPresion = value
     }
 
-    public get _historialDelPaciente(): Paciente[] | undefined {
+    public get _historialDelPaciente(): Paciente[] {
         return this.historialDelPaciente
     }
 
-    public set _historialDelPaciente(value: Paciente[] | undefined) {
+    public set _historialDelPaciente(value: Paciente[]) {
         this.historialDelPaciente = value
     }
     
