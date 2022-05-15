@@ -10,7 +10,7 @@ export class Paciente extends Persona {
 
     private listaDeCitas: Cita[];
 
-    constructor (id:string,Nombre:string,Apellido:string,private fechaNacimiento: Date,private profesion: string, private peso: number,private telefono: number[],private correoElectronico: string,private suscripcion: Suscripcion){
+    constructor (id:string,Nombre:string,Apellido:string,private fechaNacimiento: string,private profesion: string, private peso: number,private telefono: number[],private correoElectronico: string,private suscripcion: Suscripcion){
         super(id,Nombre,Apellido);
         this.listaDeCitas = [];
     }
@@ -25,25 +25,25 @@ export class Paciente extends Persona {
     get _Apellido():string{
         return this.Apellido;
     }  
-    public get FechaNacimiento(): Date {
+    get FechaNacimiento(): string {
         return this.fechaNacimiento;
     }
-    public get Profesion(): string {
+    get Profesion(): string {
         return this.profesion;
     }
-    public get Peso(): number {
+    get Peso(): number {
         return this.peso;
     }
-    public get Telefono(): number[] {
+    get Telefono(): number[] {
         return this.telefono;
     }
-    public get CorreoElectronico(): string {
+    get CorreoElectronico(): string {
         return this.correoElectronico;
     }
-    public get Suscripcion(): Suscripcion {
+    get Suscripcion(): Suscripcion {
         return this.suscripcion;
     }
-    public get ListaDeCitas(): Cita[] {
+    get ListaDeCitas(): Cita[] {
         return this.listaDeCitas;
     }
 
@@ -57,44 +57,45 @@ export class Paciente extends Persona {
     set _Apellido(value:string){
         this.Apellido=value;
     }
-    public set FechaNacimiento(value: Date) {
+    set FechaNacimiento(value: string) {
         this.fechaNacimiento = value;
     }
-    public set Profesion(value: string) {
+    set Profesion(value: string) {
         this.profesion = value;
     }
-    public set Peso(value: number) {
+    set Peso(value: number) {
         this.peso = value;
     }
-    public set Telefono(value: number[]) {
+    set Telefono(value: number[]) {
         this.telefono = value;
     }
-    public set CorreoElectronico(value: string) {
+    set CorreoElectronico(value: string) {
         this.correoElectronico = value;
     }
-    public set Suscripcion(value: Suscripcion) {
+    set Suscripcion(value: Suscripcion) {
         this.suscripcion = value;
     }
-    public set ListaDeCitas(value: Cita[]) {
+    set ListaDeCitas(value: Cita[]) {
         this.listaDeCitas = value;
     }
 
     //methods
-    modificar(): void {
+    modificar(persona:Persona): void {
         
     }   ;
-    consultar(): void {
-        
+    consultar(persona:Persona): void {
+        console.log(`Se ha registrado el Paciente con id ${this._id}, Nombre: ${this._Nombre}, Apellido: ${this._Apellido}, Fecha de nacimiento: ${this.FechaNacimiento}, Profesion: ${this.Profesion}, Peso: ${this.Peso}, Telefono: ${this.Telefono} y correo electronico: ${this.CorreoElectronico}`)   
     }   ;
     calcularEdad(): number{
+        //Se calcula la edad a traves de la fecha de nacimiento
         const zero = 0;
         return zero;
     };
     pedirCita(): void{
-
+        //Se pide la cita, donde la cita quedara en proceso
     };
     consultarHistorialMedico(historialMedico: HistorialMedico): void{
-        
+        //Se consulta el historial medico del paciente
     };
 }
 
