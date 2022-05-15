@@ -5,7 +5,7 @@ import { Modalidad } from "../Enumerations/Modalidad";
 export class Suscripcion{
 
 
-    constructor (private id: string,private fechaVencimiento: Date,private monto: number,private modalidad: Modalidad,private estado: Estado,private beneficioEmpleado: boolean,private metodoDePagoElegido: MetodoDePago){
+    constructor (private id: string,private fechaVencimiento: string,private monto: number,private modalidad: Modalidad,private estado: Estado,private beneficioEmpleado: boolean,private metodoDePagoElegido: MetodoDePago){
    
     } 
 
@@ -13,7 +13,7 @@ export class Suscripcion{
     get Id(): string {
         return this.id;
     }
-    get FechaVencimiento(): Date {
+    get FechaVencimiento(): string {
         return this.fechaVencimiento;
     }
     get Monto(): number {
@@ -36,7 +36,7 @@ export class Suscripcion{
     set Id(value: string) {
         this.id = value;
     }
-    set FechaVencimiento(value: Date) {
+    set FechaVencimiento(value: string) {
         this.fechaVencimiento = value;
     }
     set Monto(value: number) {
@@ -60,10 +60,10 @@ export class Suscripcion{
 
     };
     cancelarSuscripcion(): void{
-
+            
     };
     verificarBeneficioEmpleado(): void{
-        
+        //Se verifica el beneficio empleado
     };
 
 }

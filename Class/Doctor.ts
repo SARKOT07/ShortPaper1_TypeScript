@@ -62,13 +62,13 @@ export class Doctor extends Persona{
         
     }   ;
     editarHistoriaMedica(historialMedico:HistorialMedico):HistorialMedico{
-
+        return historialMedico;
     }   ;
     crearHistoriaMedica(historial:Cita):HistorialMedico{
 
     }   ;
-    agregarCita():void{
-
+    agendarCita():void{
+        //Se agenda la cita que estaba en proceso
     }   ;
 
 }
