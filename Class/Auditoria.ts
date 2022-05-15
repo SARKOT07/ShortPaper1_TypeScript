@@ -39,15 +39,15 @@
     }
 
     asignarComportamiento (persona: Persona) : void {
-
+        //Se le asigna el tipo de comportamiento que observo la clase ObservadorAuditar    
     }
 
     verAuditoria (persona: Persona) : void {
-
+        //Se consulta la auditoria que tuvo la persona
     }
 
     guardar () : void {
-
+        //Se guarda la auditoria    
     }
 
  }
