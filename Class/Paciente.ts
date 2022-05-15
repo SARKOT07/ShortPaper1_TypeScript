@@ -80,11 +80,11 @@ export class Paciente extends Persona {
     }
 
     //methods
-    modificar(): void {
+    modificar(persona:Persona): void {
         
     }   ;
-    consultar(): void {
-        
+    consultar(persona:Persona): void {
+        console.log(`Se ha registrado el Paciente con id ${this._id}, Nombre: ${this._Nombre}, Apellido: ${this._Apellido}, Fecha de nacimiento: ${this.FechaNacimiento}, Profesion: ${this.Profesion}, Peso: ${this.Peso}, Telefono: ${this.Telefono} y correo electronico: ${this.CorreoElectronico}`)   
     }   ;
     calcularEdad(): number{
         //Se calcula la edad a traves de la fecha de nacimiento
