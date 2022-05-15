@@ -1,6 +1,6 @@
 export enum EventoComportamiento {
-    CambioHistorialMedico,
-    BusquedaPorEspecialidad,
-    SolicitudDeCita,
-    ConsultaHistoriaMedica,
+    cambioHistorialMedico,
+    busquedaPorEspecialidad,
+    solicitudDeCita,
+    consultaHistoriaMedica,
   };

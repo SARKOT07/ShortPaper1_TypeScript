@@ -1,13 +1,12 @@
 import { Cita } from "./Cita";
 import { Paciente } from "./Paciente";
 import { HistorialMedico } from "./HistorialMedico";
-import { EstadoCita } from "../Enumerations/EstadoCita";
 
 
 export class CitaPresencial extends Cita {
 
-    constructor (id: string, fechayHora: Date, estado: EstadoCita, personaCitada: Paciente[], historialMedicoDeLaCita: HistorialMedico[], private direccion: string, private longitud: string, private altitud: string) {
-        super(id,fechayHora,estado,personaCitada,historialMedicoDeLaCita);
+    constructor (id: string, fechayHora: Date, personaCitada: Paciente[], historialMedicoDeLaCita: HistorialMedico[], private direccion: string, private longitud: string, private altitud: string) {
+        super(id,fechayHora,personaCitada,historialMedicoDeLaCita);
     }
 
     public get _direccion(): string {
