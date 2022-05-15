@@ -40,12 +40,12 @@ constructor (private id: string,private numeroTarjeta: number,private nombreAsoc
 
     //methods
     calcularComision(montoSuscripcion:number): void{
-
+        //Se calcula la comision del monto para beneficios
     };
     pago(): void{
-
+        //Se realiza el pago    
     };
     verificarPago(): void{
-        
+        //Se verifica el pago
     };
 }
