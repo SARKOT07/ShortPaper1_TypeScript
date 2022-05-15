@@ -31,7 +31,6 @@ export class ExamenValor {
     }
 
     verificarEstado (valorActual: number) : string {
-        //Se verfica el nivel de los valores de la persona y retorna si esta entre los niveles normales o alterados
         const resultado  = "placeholder"
         return resultado;
     }

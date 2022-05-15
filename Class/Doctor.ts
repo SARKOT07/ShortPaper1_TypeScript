@@ -55,20 +55,20 @@ export class Doctor extends Persona{
     set _especialidad(value:Especialidad[]){
         this.especialidad=value;
     }
-    modificar(persona:Persona): void {
+    modificar(): void {
         
     }   ;
-    consultar(persona:Persona): void {
+    consultar(): void {
         
     }   ;
     editarHistoriaMedica(historialMedico:HistorialMedico):HistorialMedico{
-        return historialMedico;
+
     }   ;
-    crearHistoriaMedica(historial:Cita)/*:HistorialMedico*/{
-     
+    crearHistoriaMedica(historial:Cita):HistorialMedico{
+
     }   ;
-    agendarCita():void{
-        //Se agenda la cita que estaba en proceso
+    agregarCita():void{
+
     }   ;
 
 }
