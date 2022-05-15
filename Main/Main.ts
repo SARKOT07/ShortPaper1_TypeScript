@@ -8,7 +8,7 @@ const condicion = prompt("Desea registrar un paciente? [y/n]");
       let admins = new Admin();
       let pacientes: Paciente;
       pacientes = admins.registrarPaciente();
-      console.log(`Se ha registrado el Paciente con id ${pacientes._id}, Nombre: ${pacientes._Nombre}, Apellido: ${pacientes._Apellido}, Fecha de nacimiento: ${pacientes.FechaNacimiento}, Profesion: ${pacientes.Profesion}, Peso: ${pacientes.Peso}, Telefono: ${pacientes.Telefono} y correo electronico: ${pacientes.CorreoElectronico}`)
+      pacientes.consultar(pacientes);
       const condicion = prompt("CASODEUSOILIANA  [y/n]");
       switch (condicion) {
         case "y":
