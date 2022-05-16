@@ -39,7 +39,7 @@ npm install
 
 Para iniciar la simulación localmente, siga las instrucciones que se especifican a continuación:
 
-1. En la ventana de comandos, dirigirse hacia la la direccion /Clases JS/Main
+1. En la ventana de comandos, dirigirse hacia la la direccion /ClasesJS/Main
 2. Ejecutar con el comando `node Main.js` para iniciar la simulación. 
 
 ## ⚙️Colaboladores
