@@ -2,17 +2,23 @@ import { Suscripcion } from "./Suscripcion";
 import { Cita } from "./Cita";
 import { HistorialMedico } from "./HistorialMedico";
 import { Persona } from "./Persona";
+import { EstadoCita } from "../Enumerations/EstadoCita";
+import { CitaPresencial } from "./CitaPresencial";
+import { CitaVirtual } from "./CitaVirtual";
+const prompt = require("prompt-sync")();
 
 
 
 
 export class Paciente extends Persona {
 
-    private listaDeCitas: Cita[];
+    private listaDeCitasPresencial: CitaPresencial[];
+    private listaDeCitasVirtual: CitaVirtual[];
 
     constructor (id:string,Nombre:string,Apellido:string,private fechaNacimiento: string,private profesion: string, private peso: number,private telefono: number[],private correoElectronico: string,private suscripcion: Suscripcion){
         super(id,Nombre,Apellido);
-        this.listaDeCitas = [];
+        this.listaDeCitasPresencial = [];
+        this.listaDeCitasVirtual = [];
     }
 
    //Getters
@@ -43,8 +49,11 @@ export class Paciente extends Persona {
     get Suscripcion(): Suscripcion {
         return this.suscripcion;
     }
-    get ListaDeCitas(): Cita[] {
-        return this.listaDeCitas;
+    get ListaDeCitasPresencial(): CitaPresencial[] {
+        return this.listaDeCitasPresencial;
+    }
+    get ListaDeCitasVirtual(): CitaVirtual[] {
+        return this.listaDeCitasVirtual;
     }
 
     //Setters
@@ -75,25 +84,54 @@ export class Paciente extends Persona {
     set Suscripcion(value: Suscripcion) {
         this.suscripcion = value;
     }
-    set ListaDeCitas(value: Cita[]) {
-        this.listaDeCitas = value;
+    set ListaDeCitasPresencial(value: CitaPresencial[]) {
+        this.listaDeCitasPresencial = value;
+    }
+    set ListaDeCitasVirtual(value: CitaVirtual[]) {
+        this.listaDeCitasVirtual = value;
     }
 
     //methods
     modificar(persona:Persona): void {
         
-    }   ;
+    };
+
     consultar(persona:Persona): void {
-        console.log(`Se ha registrado el Paciente con id ${this._id}, Nombre: ${this._Nombre}, Apellido: ${this._Apellido}, Fecha de nacimiento: ${this.FechaNacimiento}, Profesion: ${this.Profesion}, Peso: ${this.Peso}, Telefono: ${this.Telefono} y correo electronico: ${this.CorreoElectronico}`)   
-    }   ;
+        console.log(`Se ha registrado el Paciente con id ${this._id}, Nombre: ${this._Nombre}, Apellido: ${this._Apellido}, Fecha de nacimiento: ${this.FechaNacimiento}, Profesion: ${this.Profesion}, Peso: ${this.Peso}, Telefono: ${this.Telefono} y correo electronico: ${this.CorreoElectronico} \n`)   
+    };
+
     calcularEdad(): number{
         //Se calcula la edad a traves de la fecha de nacimiento
         const zero = 0;
         return zero;
     };
-    pedirCita(): void{
+
+    pedirCitaPresencial(): CitaPresencial{
         //Se pide la cita, donde la cita quedara en proceso
+        const fecha = prompt("¿Que dia desea agendar su cita? Utilice el formato aaaa-mm-dd ");
+        const hora = prompt("¿A que hora desea que se realize la consulta? Utilice el formato hh:mm:ss ");
+        let fechaYHora = new Date(fecha + "T" + hora);
+        const lugar = prompt("¿Donde desea que se lleve a acabo la cita? Indique una ciudad dentro de caracas ")
+        const longitud = "52° 31' 28'' N";
+        const latitud = "13° 24' 38'' E";
+        const personaCitada = this;
+        const historialMedicoDeLaCita: HistorialMedico[] = [];
+        let newCita: CitaPresencial = new CitaPresencial("1", fechaYHora, EstadoCita.Agendado, personaCitada, historialMedicoDeLaCita, lugar, longitud, latitud);
+        return newCita;
+        
     };
+
+    pedirCitaVirtual (): CitaVirtual {
+        const fecha = prompt("¿Que dia desea agendar su cita? Utilice el formato aaaa-mm-dd ");
+        const hora = prompt("¿A que hora desea que se realize la consulta? Utilice el formato hh:mm:ss ");
+        let fechaYHora = new Date(fecha + "T" + hora);
+        const url = "https://explore.zoom.us/es/products/meetings/";
+        const personaCitada = this;
+        const historialMedicoDeLaCita: HistorialMedico[] = [];
+        let newCita: CitaVirtual = new CitaVirtual("1", fechaYHora, EstadoCita.Agendado, personaCitada, historialMedicoDeLaCita, url);
+        return newCita;
+    }
+
     consultarHistorialMedico(historialMedico: HistorialMedico): void{
         //Se consulta el historial medico del paciente
     };

@@ -5,7 +5,7 @@ import { EstadoCita } from "../Enumerations/EstadoCita"
     
 export class Cita {
 
-    constructor (private id: string, private fechayHora: Date,private estado: EstadoCita , private personaCitada: Paciente[], private historialMedicoDeLaCita: HistorialMedico[]) {      
+    constructor (private id: string, private fechayHora: Date,private estado: EstadoCita , private personaCitada: Paciente, private historialMedicoDeLaCita: HistorialMedico[]) {      
     }
 
     get Id(): string {
@@ -17,7 +17,7 @@ export class Cita {
     get Estado(): EstadoCita {
         return this.estado
     }
-    get PersonaCitada(): Paciente[] {
+    get PersonaCitada(): Paciente {
         return this.personaCitada
     }
     get HistorialMedicoDeLaCita(): HistorialMedico[] {
@@ -33,21 +33,22 @@ export class Cita {
     set Estado(value: EstadoCita) {
         this.estado = value
     }
-    set PersonaCitada(value: Paciente[]) {
+    set PersonaCitada(value: Paciente) {
         this.personaCitada = value
     }
     set HistorialMedicoDeLaCita(value: HistorialMedico[]) {
         this.historialMedicoDeLaCita = value
     }
-    modificarCita (citaSolicitada: Cita) {
+    
+    modificarCita () {
 
     }
 
-    eliminarCita (citaSolicitada: Cita) {
+    eliminarCita () {
 
     }
 
-    consultarCita (citaSolicitada: Cita) {
+    consultarCita () {
         
     }
 }
