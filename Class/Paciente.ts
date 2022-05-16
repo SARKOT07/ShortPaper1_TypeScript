@@ -97,7 +97,19 @@ export class Paciente extends Persona {
     };
 
     consultar(persona:Persona): void {
-        console.log(`Se ha registrado el Paciente con id ${this._id}, Nombre: ${this._Nombre}, Apellido: ${this._Apellido}, Fecha de nacimiento: ${this.FechaNacimiento}, Profesion: ${this.Profesion}, Peso: ${this.Peso}, Telefono: ${this.Telefono} y correo electronico: ${this.CorreoElectronico} \n`)   
+        console.log(`\n`);  
+        console.log(`Se ha registrado sastifactoriamente el Paciente`);
+        console.log(`\n`); 
+        console.log(`Datos:`);      
+        console.log(`\n`);   
+        console.log(`id: ${this._id}`);
+        console.log(`Nombre: ${this._Nombre}`);
+        console.log(`Apellido: ${this._Apellido}`);
+        console.log(`Fecha de nacimiento: ${this.FechaNacimiento}`);
+        console.log(`Profesion: ${this.Profesion}`);
+        console.log(`Peso: ${this.Peso}`);
+        console.log(`Telefono: ${this.Telefono}`);
+        console.log(`Correo electronico: ${this.CorreoElectronico} \n`);
     };
 
     calcularEdad(): number{
