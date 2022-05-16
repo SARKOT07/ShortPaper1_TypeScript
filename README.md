@@ -13,7 +13,6 @@
 ## 📑Pre-requisitos
 - [Node](https://nodejs.org/en/) - Descargar el Último LTS
 - [Typescript](https://www.typescriptlang.org) - Lenguaje de Programación.
-- [Git](https://git-scm.com) - Manejador de versiones.
 
 ## 📌Instalación
 
