@@ -15,7 +15,7 @@
 - [Typescript](https://www.typescriptlang.org) - Lenguaje de Programación.
 - [Git](https://git-scm.com) - Manejador de versiones.
 
-### 📌Instalación
+## 📌Instalación
 
 Para instalar [Typescript](https://www.typescriptlang.org) haciendo uso de npm.
 
