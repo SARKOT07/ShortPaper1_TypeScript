@@ -15,13 +15,13 @@ export class Admin{
 
     registrarPaciente():Paciente{
 
-        const nombreQ = prompt("Cual es tu nombre ?");
-        const apellidoQ = prompt("Cual es tu apellido ? ");
-        const fechaNQ = prompt("Cual es tu fecha de nacimiento ?");
-        const profesionQ = prompt("Cual es tu profesion ?");
-        const pesoQ = prompt("Cual es tu peso ?");
-        const telefonoQ = prompt("Cual es tu telefono ?");
-        const correoQ = prompt("Cual es tu correo electronico ?");
+        const nombreQ = prompt("Cual es tu nombre? ");
+        const apellidoQ = prompt("Cual es tu apellido? ");
+        const fechaNQ = prompt("Cual es tu fecha de nacimiento? ");
+        const profesionQ = prompt("Cual es tu profesion? ");
+        const pesoQ = prompt("Cual es tu peso? ");
+        const telefonoQ = prompt("Cual es tu telefono? ");
+        const correoQ = prompt("Cual es tu correo electronico? ");
         let paypalNew = new Paypal('1','franco@gmail.com','123456');
         let suscripcionNew = new Suscripcion('1','2023-06-20',50,Modalidad.Anual,Estado.Activo,false,paypalNew);
         let pacienteNew = new Paciente('1',nombreQ,apellidoQ,fechaNQ,profesionQ,pesoQ,telefonoQ,correoQ,suscripcionNew);    
