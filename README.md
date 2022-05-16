@@ -15,7 +15,7 @@
 - [Typescript](https://www.typescriptlang.org) - Lenguaje de Programación.
 - [Git](https://git-scm.com) - Manejador de versiones.
 
-### 📌Instalación
+## 📌Instalación
 
 Para instalar [Typescript](https://www.typescriptlang.org) haciendo uso de npm.
 
@@ -34,7 +34,6 @@ Instalamos los módulos necesarios
 ```
 npm install
 ```
-
 ## ⚙️Ejecutar Simulación
 
 Para iniciar la simulación localmente, siga las instrucciones que se especifican a continuación:
