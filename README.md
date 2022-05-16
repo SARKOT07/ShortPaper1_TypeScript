@@ -34,7 +34,6 @@ Instalamos los módulos necesarios
 ```
 npm install
 ```
-
 ## ⚙️Ejecutar Simulación
 
 Para iniciar la simulación localmente, siga las instrucciones que se especifican a continuación:
