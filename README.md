@@ -44,7 +44,7 @@ Para iniciar la simulación localmente, siga las instrucciones que se especifica
 5. Luego se preguntará si quiere solicitar 1 cita. (“p:Cita presencial” y “v:Cita virtual”)
 6. Si selecciona cualquiera de las 2 opciones se le pide los datos necesarios para registar una cita con el paciente previamente registrado.
 
-## ⚙️Colaboladores
+## 🌎Colaboladores
 
 - **Diego Cumares** - [CRONOXT](https://github.com/CRONOXT)
 - **Iliana Dias** - [ilixna](https://github.com/ilixna)
