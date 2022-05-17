@@ -38,7 +38,11 @@ npm install
 Para iniciar la simulación localmente, siga las instrucciones que se especifican a continuación:
 
 1. En la ventana de comandos, dirigirse hacia la la direccion /ClasesJS/Main
-2. Ejecutar con el comando `node Main.js` para iniciar la simulación. 
+2. Ejecutar con el comando `node Main.js` para iniciar la simulación.
+3. En pantalla se pide agendar un paciente.
+4. Después de registrar el paciente se consulta sus datos.
+5. Luego se preguntará si quiere solicitar 1 cita. (“p:Cita presencial” y “v:Cita virtual”)
+6. Si selecciona cualquiera de las 2 opciones se le pide los datos necesarios para registar una cita con el paciente previamente registrado.
 
 ## ⚙️Colaboladores
 
